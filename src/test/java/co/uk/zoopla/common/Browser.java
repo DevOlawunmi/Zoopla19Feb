@@ -27,8 +27,8 @@ public class Browser extends DriverLib
             case "Chrome":
                 driver = initChrome();
                 break;
-            default:
-                driver = initHeadlessChrome();
+            //default:
+               // driver = initHeadlessChrome();
         }
            driver.manage().window().maximize();
     }

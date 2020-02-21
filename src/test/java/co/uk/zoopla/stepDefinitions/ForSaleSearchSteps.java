@@ -1,14 +1,16 @@
 package co.uk.zoopla.stepDefinitions;
 
+import co.uk.zoopla.pages.BasePage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class ForSaleSearchSteps
+public class ForSaleSearchSteps extends BasePage
 {
     @Given("I navigate to Zoopla.co.uk")
-    public void i_navigate_to_Zoopla_co_uk() {
-
+    public void i_navigate_to_Zoopla_co_uk()
+    {
+      launchURL();
     }
 
     @When("I enter a {string} in the search bar")
