@@ -22,8 +22,8 @@ public class ForSaleSearchSteps extends BasePage
     }
 
     @When("I select {string} from the Min dropdown")
-    public void i_select_from_the_Min_dropdown(String string) {
-
+    public void i_select_from_the_Min_dropdown(String minPrice) {
+     homePage.selectMinimumPrice(minPrice);
     }
 
     @When("I select {string} from the Max dropdown")

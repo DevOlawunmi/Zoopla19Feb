@@ -12,10 +12,16 @@ public class HomePage extends BasePage
     }
     @FindBy(id = "search-input-location")
     private WebElement searchField;
+    @FindBy(id = "forsale_price_min")
+    private WebElement minPrice;
 
     public void enterLocation (String location)
     {
       searchField.clear();
       searchField.sendKeys(location);
+    }
+    public void selectMinimumPrice(String miniPrice)
+    {
+        selectElementByVisibleText(minPrice,miniPrice);
     }
 }
