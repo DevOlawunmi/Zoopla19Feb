@@ -22,6 +22,8 @@ public class HomePage extends BasePage
     private WebElement propertyType;
     @FindBy(id = "beds_min")
     private WebElement noOfBeds;
+    @FindBy(css = ".button.button--primary")
+    private WebElement submitButton;
 
     public void enterLocation (String location)
     {
@@ -44,5 +46,10 @@ public class HomePage extends BasePage
     public void selectNoOfBeds(String beds)
     {
         selectElementByVisibleText(noOfBeds,beds);
+    }
+    public SearchResultPage clickOnSubmitButton()
+    {
+        submitButton.click();
+        return new SearchResultPage(driver);
     }
 }
