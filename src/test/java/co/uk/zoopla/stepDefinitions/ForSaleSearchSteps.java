@@ -12,33 +12,39 @@ public class ForSaleSearchSteps extends BasePage
     HomePage homePage = PageFactory.initElements(driver, HomePage.class);
     @Given("I navigate to Zoopla.co.uk")
     public void i_navigate_to_Zoopla_co_uk()
+
     {
       launchURL();
     }
 
     @When("I enter a {string} in the search bar")
-    public void i_enter_a_in_the_search_bar(String location) {
+    public void i_enter_a_in_the_search_bar(String location)
+    {
      homePage.enterLocation(location);
     }
 
     @When("I select {string} from the Min dropdown")
-    public void i_select_from_the_Min_dropdown(String minPrice) {
+    public void i_select_from_the_Min_dropdown(String minPrice)
+    {
      homePage.selectMinimumPrice(minPrice);
     }
 
     @When("I select {string} from the Max dropdown")
-    public void i_select_from_the_Max_dropdown(String string) {
-
+    public void i_select_from_the_Max_dropdown(String maxPrice)
+    {
+     homePage.selectMaximumPrice(maxPrice);
     }
 
     @When("I select {string} from the Property dropdown")
-    public void i_select_from_the_Property_dropdown(String string) {
-
+    public void i_select_from_the_Property_dropdown(String property)
+    {
+     homePage.selectPropertyType(property);
     }
 
     @When("I select {string} from the rooms dropdown")
-    public void i_select_from_the_rooms_dropdown(String string) {
-
+    public void i_select_from_the_rooms_dropdown(String beds)
+    {
+        homePage.selectNoOfBeds(beds);
     }
 
     @When("I click on the Search button")

@@ -16,6 +16,6 @@ Feature: Search for Property for sale
 
     Examples:
       |Location|MinPrice|MaxPrice|PropertyType|Bedrooms|
-      |ST4 7DW|£50,000	|£400,000	|Flat	|	3+|
-      |Liverpool|£600,000|£1,000,000|House|7+|
-      |M40|£200,000|£800,000|Farms/land|  |
+      |ST4 7DW|£50,000	|£400,000	|Flats	|	3+|
+      |Liverpool|£600,000|£1,000,000|Houses|7+|
+      |M40|£200,000|£800,000|Farms/land|  Studio+|
